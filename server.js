@@ -35,10 +35,11 @@ app.get('/', (req, res) => {
     res.json({"message": "Welcome to Tasks4You application. Track tasks effectively. Organize and keep track of tasks your notes."});
 });
 
+// Require Tasks routes
+require('/Users/jimmykane/IST 256 Projects/Sprint 1 - Final/app/routes/task.routes.js')(app);
+
 // listen for requests
 app.listen(3000, () => {
     console.log("Server is listening on port 3000");
 });
 
-// Require Tasks routes
-require('./app/routes/task.routes.js')(app);
