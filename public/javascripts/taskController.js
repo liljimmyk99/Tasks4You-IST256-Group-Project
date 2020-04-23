@@ -25,3 +25,32 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+//Adding Elements to the Table
+var submitTaskButton = document.getElementById("submitTaskButton");
+
+function addTaskToTable(){
+  //Getting Values from the TextFields
+  let nameField = document.getElementById("taskNameField");
+  let descriptionField = document.getElementById("taskDescriptionField");
+  let taskName = nameField.value;
+  let taskDescription = descriptionField.value;
+  let taskDate = "05/3/2020";
+  let table = document.getElementById("taskTable");
+  nameField.value="";
+  descriptionField.value="";
+
+  //Creating new row in Table
+  let newRow = table.insertRow(1);
+  let newNameElement = newRow.insertCell(0);
+  let newDescriptionElement = newRow.insertCell(1);
+  let newDateElement = newRow.insertCell(2);
+
+  newNameElement.innerHTML = taskName;
+  newDescriptionElement.innerHTML = taskDescription;
+  newDateElement.innerHTML = taskDate;
+  modal.style.display = "none";
+
+}
+submitTaskButton.addEventListener("click", addTaskToTable);

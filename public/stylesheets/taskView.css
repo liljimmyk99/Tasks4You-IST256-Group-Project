@@ -133,7 +133,7 @@ nav {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 25%;
   }
   
   /* The Close Button */
@@ -157,6 +157,15 @@ nav {
       margin: auto;
       padding: 10px;
   }
+  #tableHeadings{
+        background-color: teal;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: verdana;
+        font-weight: bold;
+        color: white;
+  }
+
   th{
       text-align: center;
   }
