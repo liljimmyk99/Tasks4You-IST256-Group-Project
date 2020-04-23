@@ -3,7 +3,8 @@
 <head>
   <title>Tasks4You Task View</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="stylesheets/calendar.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/taskView.css">
+  <script src="javascripts/taskController.js" defer></script>
 </head>
 <body>
   <h1>Tasks4You</h1>
@@ -18,6 +19,27 @@
         <li><a href="help.html">Help</a></li>
       </ul>
     </nav>
-    <p>Task View</p>
+    <h3>Task View</h3>
+      <button id="addTaskButton" class="btn">Add Task</button>
+      <!--Code from https://www.w3schools.com/howto/howto_css_modals.asp-->
+      <!-- The Modal -->
+      <div id="addTaskModal" class="modal">
+        <!--Model Content-->
+        <div class="modal-content">
+          <span class="close"></span>
+          <input type="text" id="taskNameField" name="taskName" placeholder="Name of Task Here" required>
+          <input type="text" id="taskDescriptionField" name="description" placeholder="Description of Task here" required>
+          <button  class="btn" type="button"  id="submitTaskButton">Submit Task</button>
+        </div>
+      </div>
+
+      <table id="taskTable">
+        <tr>
+          <th>Name of Task</th>
+          <th>Description of Task</th>
+          <th>Due Date of Task</th>
+        </tr>
+      </table>
+      
 </body>
 </html>
