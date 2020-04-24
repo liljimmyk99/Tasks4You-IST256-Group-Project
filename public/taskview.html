@@ -4,6 +4,10 @@
   <title>Tasks4You Task View</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="stylesheets/taskView.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   <script src="javascripts/taskController.js" defer></script>
 </head>
 <body>
@@ -21,6 +25,7 @@
     </nav>
     <h3>Task View</h3>
       <button id="addTaskButton" class="btn">Add Task</button>
+      <button id="getDateButton" class="btn">Get Date</button>
       <!--Code from https://www.w3schools.com/howto/howto_css_modals.asp-->
       <!-- The Modal -->
       <div id="addTaskModal" class="modal">
@@ -38,6 +43,7 @@
           <th>Name of Task</th>
           <th>Description of Task</th>
           <th>Due Date of Task</th>
+          <th>Completed</th>
         </tr>
       </table>
       

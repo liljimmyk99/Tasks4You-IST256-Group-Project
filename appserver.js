@@ -54,7 +54,8 @@ app.get('/', (req, res) => {
 });
 
 // Require Tasks routes
-require('/Users/jimmykane/IST 256 Projects/Sprint 1 - Final/app/routes/task.routes.js')(app);
+var taskRouter = require('./app/routes/task');
+app.use ('/tasks', taskRouter);
 
 // listen for requests
 app.listen(3000, () => {

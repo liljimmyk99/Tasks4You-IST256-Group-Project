@@ -2,17 +2,17 @@ module.exports = (app) => {
     const tasks = require('../controllers/task.controller.js');
 
     // Create a new Task
-    app.post('/tasks', tasks.create);
+    app.post('/', tasks.create);
 
     // Retrieve all Tasks
-    app.get('/tasks', tasks.findAll);
+    app.get('/', tasks.findAll);
 
     // Retrieve a single task with taskId
-    app.get('/tasks/:taskId', tasks.findOne);
+    app.get('/:taskId', tasks.findOne);
 
     // Update a Task with taskId
-    app.put('/tasks/:taskId', tasks.update);
+    app.put('/:taskId', tasks.update);
 
     // Delete a Task with taskId
-    app.delete('/task/:taskId', tasks.delete);
+    app.delete('/:taskId', tasks.delete);
 }

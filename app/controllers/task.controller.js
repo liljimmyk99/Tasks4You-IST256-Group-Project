@@ -19,6 +19,7 @@ exports.create = (req, res) => {
     // Save Task in the database
     task.save()
     .then(data => {
+        console.log(data);
         res.send(data);
     }).catch(err => {
         res.status(500).send({
