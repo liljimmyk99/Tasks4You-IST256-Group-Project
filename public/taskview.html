@@ -25,7 +25,6 @@
     </nav>
     <h3>Task View</h3>
       <button id="addTaskButton" class="btn">Add Task</button>
-      <button id="getDateButton" class="btn">Get Date</button>
       <!--Code from https://www.w3schools.com/howto/howto_css_modals.asp-->
       <!-- The Modal -->
       <div id="addTaskModal" class="modal">
@@ -34,6 +33,7 @@
           <span class="close"></span>
           <input type="text" id="taskNameField" name="taskName" placeholder="Name of Task Here" required>
           <input type="text" id="taskDescriptionField" name="description" placeholder="Description of Task here" required>
+          <input type="text" id="dueDateField" name="date" placeholder = "MM/DD/YYYY" required> 
           <button  class="btn" type="button"  id="submitTaskButton">Submit Task</button>
         </div>
       </div>

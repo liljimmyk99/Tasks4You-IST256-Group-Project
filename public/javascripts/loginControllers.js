@@ -3,7 +3,7 @@
 usernameField = document.getElementById("usernameField");
 passwordField = document.getElementById("passwordField");
 submitButton = document.getElementById("submitButton");
-//$errorLabel = $("#errorLabel");
+errorLabel = document.getElementById("errorLabel");
 //$forgotPasswordText = $("forgotPasswordLink");
 
 
@@ -32,10 +32,12 @@ function checkPassword(){
             }
             else{
                 console.log("Error!");
+                errorLabel.value = "Error, incorrect Username and/or Password";
             }
         }
         else{
             console.log("No Such User Exists");
+            errorLabel.innerHTML = "Error, incorrect Username and/or Password";
         }
     }
     usernameField.value = null;
@@ -53,9 +55,6 @@ function forgotPassword(){
             console.log("Yours password is: " + users[i].password);
             found = true;
         }
-    }
-    if(!found){
-        console.log("ERROR: UserName does not exist in system");
     }
 }
 submitButton.addEventListener("click", checkPassword);
