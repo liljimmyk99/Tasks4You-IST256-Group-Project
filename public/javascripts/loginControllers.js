@@ -26,18 +26,16 @@ function checkPassword(){
         let incorrectPassword = false;
         if(validUserName === enteredUserName){
             if(validPassword === enteredPassword){
-                console.log("Success");
                 console.log("Successfully logged in as " + validUserName + " with a password of " + validPassword)
+                window.location.replace("about.html");
                 break;
             }
             else{
-                incorrectPassword = true;
+                console.log("Error!");
             }
         }
-        else if (incorrectPassword){
-            //$errorLabel.show();
-            console.log(enteredUserName + " has entered an incorrect password;")
-            break;
+        else{
+            console.log("No Such User Exists");
         }
     }
     usernameField.value = null;
@@ -46,7 +44,8 @@ function checkPassword(){
 }
 
 function forgotPassword(){
-    let enteredUserName = $usernameField.text;
+    let enteredUserName = usernameField.text;
+    console.log("Button has been clicked");
     let found = false;
     for(let i = 0; i < users.length; i++){
         let validUserName = users[i].username;
@@ -60,7 +59,6 @@ function forgotPassword(){
     }
 }
 submitButton.addEventListener("click", checkPassword);
-//submitButton.addEventListener("click", checkPassword);
-//$forgotPasswordText.addEventListener("click", forgotPassword());
+document.getElementById("forgotPasswordText").addEventListener("click", forgotPassword());
 
 
